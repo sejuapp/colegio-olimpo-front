@@ -1,0 +1,6 @@
+<div *ngFor="let alert of msgs">
+  <alert type="{{alert.severity}}">
+    <strong>{{alert.summary}}</strong>&nbsp;
+    <span [innerHtml]="alert.detail"></span>
+  </alert>
+</div>
