@@ -35,6 +35,7 @@ export class SelectProfesorComponent implements OnInit {
   async consultaInicial(){
     try {
       this.loading = true;
+      this.msgs = [];
       this.lstProfesores = await this.srvProfesor.findAll().toPromise();
       setTimeout(()=> {this.loading = false;}, 900);
     } catch (error) {

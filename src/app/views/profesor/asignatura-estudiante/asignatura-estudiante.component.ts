@@ -36,6 +36,7 @@ export class AsignaturaEstudianteComponent implements OnInit {
 
   async consultaInicial(){
     try {
+      this.msgs = [];
       this.lstAsignaturas = [];
       if(this.profesorId != 0){
         this.loading = true;
