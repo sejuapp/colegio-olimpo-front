@@ -1,0 +1,15 @@
+<app-messages [value]="msgs"></app-messages>
+<app-loading  [render]="loading" [texto]="'Consultando divinidades'"></app-loading>
+
+<form [formGroup]='selectForm' autocomplete="off" novalidate [hidden]  [hidden]="loading == false && msgs.length == 0 ? false : true">
+  <mat-form-field appearance="fill">
+    <mat-label>Divinidad </mat-label>
+    <mat-select required formControlName="profesor" (selectionChange)="seleccionar()">
+      <mat-option>--</mat-option>
+      <mat-option *ngFor="let item of lstProfesores" [value]="item">
+        {{item?.nombre}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="f.profesor.errors">Seleccione una divinidad </mat-error>
+  </mat-form-field>
+</form>

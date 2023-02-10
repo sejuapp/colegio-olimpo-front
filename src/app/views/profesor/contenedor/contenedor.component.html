@@ -1,0 +1,19 @@
+<mat-card  class="cadPrincipal">
+
+  <mat-card-header>
+    <mat-card-title>Profesores</mat-card-title>
+    <mat-card-subtitle>
+      Seleccione una antigua divinidad de la lista, para ver asignaturas, cursos y a los dioses griegos registrados
+    </mat-card-subtitle>
+  </mat-card-header>
+
+
+  <mat-card-content>
+    <br>
+    <app-select-profesor (emiter)="profesorSelecionado($event)"></app-select-profesor>
+    <br>
+
+    <app-asignatura-estudiante [profesorId]="profesorId"></app-asignatura-estudiante>
+  </mat-card-content>
+
+</mat-card>

@@ -1,0 +1,47 @@
+html, body { height: 100%; }
+body { 
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+  background-color: #d4d4d4e0 !important;
+}
+
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+}
+
+svg#clouds {
+  position: fixed;
+  bottom: -160px;
+  left: -230px;
+  z-index: -10;
+  width: 1920px;
+}
+
+.separadorInput {
+  padding-top: 10px !important;
+}
+
+.centrarVerticalPadre {
+  display: flex;
+  align-items: center;
+}
+
+
+.btnTablaContacto {
+  width: auto !important;
+}
+
+
+
+@media (max-width: 575.98px) {
+  .btnTablaContacto {
+    width: 100% !important;
+  }
+}
